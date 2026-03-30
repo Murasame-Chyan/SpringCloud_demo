@@ -82,7 +82,7 @@
                 <scope>import</scope>
             </dependency>
 
-            <!--SpringCloudAlibaba插件-->
+            <!--SpringCloudAlibaba插件 注意本版本已废弃bootstrap.yml-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
