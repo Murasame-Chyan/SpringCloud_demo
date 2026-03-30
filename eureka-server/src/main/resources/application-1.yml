@@ -1,0 +1,21 @@
+server:
+  port: 8801
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  instance:
+    # 由于不支持多个localhost的Eureka服务器，但是又只有本地测试环境，所以就只能自定义主机名称了
+    # 主机名称改为eureka01
+    hostname: eureka01
+  # 开启之前需要修改一下客户端设置（虽然是服务端
+  client:
+  # 由于我们是作为服务端角色，所以不需要获取服务端，改为false，默认为true
+    fetch-registry: true
+    # 暂时不需要将自己也注册到Eureka
+    register-with-eureka: true
+    # 将eureka服务端指向自己, 访问管理页时请访问http://localhost:8888
+    service-url:
+      defaultZone: http://eureka02:8802/eureka

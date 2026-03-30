@@ -1,0 +1,28 @@
+# 此处仅展示了切换配置文件可以切换运行端口，其余功能可以问问ai
+spring:
+  application:
+    # 服务名称和配置文件保持一致
+    name: borrow-service
+  profiles:
+    # 环境也是和配置文件保持一致
+    active: dev
+  cloud:
+    nacos:
+      config:
+        # 配置文件后缀名
+        file-extension: yml
+        # 配置中心服务器地址，也就是Nacos地址
+        server-addr: localhost:8848
+        # 添加以下配置
+        namespace: public
+        group: DEFAULT_GROUP
+        prefix: borrow-service
+#    config:
+#      # 名称，其实就是文件名称
+#      name: borrow-service
+#      # config-server的地址
+#      uri: http://localhost:8300
+#      # 环境
+#      profile: dev
+#      # 分支
+#      label: main

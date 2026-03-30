@@ -1,0 +1,27 @@
+server:
+  port: 8300
+
+spring:
+  application:
+    name: config-server
+#  profiles:
+#    active: native #  （此项与下项互斥）读取本地原生配置启动config-server（application.yml）
+  cloud:
+    config:
+      server:
+        git:
+          # 这里填写的是本地仓库地址，远程仓库直接填写远程仓库地址 http://git...
+          uri: D:\Academy\CodeSeries\Spring\ConfigRepo
+          # 默认分支设定为你自己本地或是远程分支的名称
+          default-label: main
+    nacos:
+      discovery:
+        # 配置Nacos注册中心地址
+        server-addr: localhost:8848
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8801/eureka, http://localhost:8802/eureka
+
+
