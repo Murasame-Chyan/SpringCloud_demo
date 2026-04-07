@@ -27,3 +27,7 @@ spring:
 #      profile: dev
 #      # 分支
 #      label: main
+    sentinel:
+      transport:
+        # 添加监控页面地址即可
+        dashboard: localhost:8180 # 自定义Sentinel运行的端口

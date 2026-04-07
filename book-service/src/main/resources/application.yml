@@ -13,9 +13,12 @@ spring:
       discovery:
         # 配置Nacos注册中心地址
         server-addr: localhost:8848
-
 #eureka:
 #  client:
 #    # 将两个Eureka的地址都加入，这样就算有一个Eureka挂掉，也能完成注册
 #    service-url:
 #      defaultZone: http://localhost:8801/eureka, http://localhost:8802/eureka
+    sentinel:
+      transport:
+        # 添加监控页面地址即可
+        dashboard: localhost:8180 # 自定义Sentinel运行的端口

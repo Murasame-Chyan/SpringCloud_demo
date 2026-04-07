@@ -13,3 +13,6 @@
 *.log
 */target
 .idea
+
+# key
+.txt
